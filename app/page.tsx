@@ -58,8 +58,10 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow">HANBIT ACADEMY · UNIVERSITY PUBLISHING</p>
             <h1 id="hero-title">
-              더 나은 가르침과 배움,
-              <span>내일을 준비하는 교재.</span>
+              <span className="hero-title-line">더 나은 가르침과 배움,</span>
+              <span className="hero-title-line hero-title-line-accent">
+                내일을 준비하는 교재.
+              </span>
             </h1>
             <p className="hero-description">
               기술의 변화를 읽고 교육의 본질을 지키며, 교수자의 깊이 있는
