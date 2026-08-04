@@ -58,11 +58,21 @@ export function SiteHeader() {
 
         <nav className="desktop-nav" aria-label="주요 메뉴">
           {navigation.map((item) => (
-            <a key={item.label} href={item.href}>
+            <a
+              key={item.label}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {item.label}
             </a>
           ))}
-          <a className="hanbit-plus-link" href="https://www.hanbit.co.kr/">
+          <a
+            className="hanbit-plus-link"
+            href="https://www.hanbit.co.kr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             한빛+
             <span aria-hidden="true">↗</span>
           </a>
@@ -88,7 +98,13 @@ export function SiteHeader() {
       >
         <nav aria-label="모바일 주요 메뉴">
           {navigation.map((item, index) => (
-            <a key={item.label} href={item.href} tabIndex={isOpen ? 0 : -1}>
+            <a
+              key={item.label}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={isOpen ? 0 : -1}
+            >
               <span className="menu-index">0{index + 1}</span>
               <span>{item.label}</span>
               <span aria-hidden="true">↗</span>
@@ -97,6 +113,8 @@ export function SiteHeader() {
           <a
             className="mobile-hanbit-plus"
             href="https://www.hanbit.co.kr/"
+            target="_blank"
+            rel="noopener noreferrer"
             tabIndex={isOpen ? 0 : -1}
           >
             <span className="menu-index">05</span>

@@ -73,6 +73,8 @@ export default function Home() {
               <a
                 className="text-link"
                 href="https://www.hanbit.co.kr/academy/professor/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 교수전용공간
                 <span aria-hidden="true">↗</span>
@@ -279,7 +281,13 @@ export default function Home() {
 
           <div className="channel-grid">
             {channels.map((channel) => (
-              <a key={channel.number} className="channel-card reveal" href={channel.href}>
+              <a
+                key={channel.number}
+                className="channel-card reveal"
+                href={channel.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="channel-number">{channel.number}</span>
                 <div>
                   <h3>{channel.title}</h3>
@@ -292,7 +300,12 @@ export default function Home() {
             ))}
           </div>
 
-          <a className="hanbit-plus-card reveal" href="https://www.hanbit.co.kr/">
+          <a
+            className="hanbit-plus-card reveal"
+            href="https://www.hanbit.co.kr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div>
               <span>HANBIT+</span>
               <h3>AI 시대, 기술과 사람을 연결합니다.</h3>
