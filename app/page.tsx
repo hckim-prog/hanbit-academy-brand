@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SiteHeader } from "@/components/site-header";
+import { ScrollReveal } from "./scroll-reveal";
 
 const channels = [
   {
@@ -52,6 +53,7 @@ const principles = [
 export default function Home() {
   return (
     <>
+      <ScrollReveal />
       <SiteHeader />
       <main>
         <section className="hero" aria-labelledby="hero-title">
@@ -170,8 +172,8 @@ export default function Home() {
             </div>
 
             <div className="journey-grid">
-              <div className="timeline reveal">
-                <article>
+              <div className="timeline">
+                <article className="reveal">
                   <strong>2003</strong>
                   <div>
                     <h3>컴퓨터공학에서 시작</h3>
@@ -181,7 +183,7 @@ export default function Home() {
                     </p>
                   </div>
                 </article>
-                <article>
+                <article className="reveal">
                   <strong>EXPAND</strong>
                   <div>
                     <h3>이공계 전 분야로 확장</h3>
@@ -191,7 +193,7 @@ export default function Home() {
                     </p>
                   </div>
                 </article>
-                <article>
+                <article className="reveal">
                   <strong>2021</strong>
                   <div>
                     <h3>경제경영 분야로 도약</h3>

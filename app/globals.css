@@ -860,23 +860,38 @@ button {
   letter-spacing: 0.08em;
 }
 
-@supports (animation-timeline: view()) {
-  .reveal {
-    animation: reveal-up both linear;
-    animation-range: entry 5% cover 27%;
-    animation-timeline: view();
-  }
+.reveal-ready .reveal {
+  --reveal-delay: 0ms;
+  opacity: 0;
+  translate: 0 48px;
+  transition:
+    opacity 760ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
+    translate 760ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay);
+}
 
-  @keyframes reveal-up {
-    from {
-      opacity: 0;
-      transform: translateY(34px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+.reveal-ready .section-label.reveal {
+  translate: 0 28px;
+}
+
+.reveal-ready .reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.timeline > .reveal:nth-child(2),
+.principle-list > .reveal:nth-child(2),
+.channel-grid > .reveal:nth-child(2) {
+  --reveal-delay: 80ms;
+}
+
+.timeline > .reveal:nth-child(3),
+.principle-list > .reveal:nth-child(3),
+.channel-grid > .reveal:nth-child(3) {
+  --reveal-delay: 160ms;
+}
+
+.channel-grid > .reveal:nth-child(4) {
+  --reveal-delay: 240ms;
 }
 
 @media (max-width: 1180px) {
@@ -1408,5 +1423,10 @@ button {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .reveal-ready .reveal {
+    opacity: 1;
+    translate: none;
   }
 }
