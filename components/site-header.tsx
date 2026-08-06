@@ -48,11 +48,11 @@ export function SiteHeader() {
           onClick={() => setIsOpen(false)}
         >
           <Image
-            src="/images/hanbit-academy-logo.png"
+            src="/images/hanbit-academy-logo-mono.png"
             alt="한빛아카데미"
-            width={260}
-            height={44}
-            priority
+            width={357}
+            height={65}
+            preload
           />
         </Link>
 
